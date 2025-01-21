@@ -42,35 +42,36 @@ $text-color: red;
         }
     }
     
-  </style>
+</style>
   
-  <div class="blog-post">
+<div class="blog-post">
     <h1>Blog Title</h1>
     <p>This is a paragraph</p>
-  </div>
+</div>
 
-  
-  <!-- Third practice -->
-  <style type='text/scss'>
-    #square {
-      width: 50px;
-      height: 50px;
-      background-color: red;
-    }
-    
-    #rect-a {
-      width: 100px;
-      height: 50px;
-      background-color: blue;
-    }
-    
-    #rect-b {
-      width: 50px;
-      height: 100px;
-      background-color: orange;
-    }
-    </style>
-    
-    <div id="square"></div>
-    <div id="rect-a"></div>
-    <div id="rect-b"></div>
+
+<!-- Third practice -->
+<style type='text/scss'>
+
+@mixin shape($w, $h, $bg-color) {
+    width: $w;
+    height: $h;
+    background-color: $bg-color;
+}
+
+#square {
+    @include shape(50px, 50px, red)
+}
+
+#rect-a {
+    @include shape(100px, 50px, blue)
+}
+
+#rect-b {
+    @include shape(50px, 100px, orange)
+}
+</style>
+
+<div id="square"></div>
+<div id="rect-a"></div>
+<div id="rect-b"></div>
