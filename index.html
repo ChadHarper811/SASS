@@ -1,4 +1,4 @@
-<!-- First practice: 
+<!-- First practice problem: 
 Create a variable $text-color and set it to red. 
 Then change the value of the color property for the .blog-post and h2 to the $text-color variable. -->
 <style type='text/scss'>
@@ -31,7 +31,7 @@ $text-color: red;
 </div>
 
 
-<!-- Second practice: 
+<!-- Second practice problem: 
 Use the nesting technique shown above to re-organize the CSS rules for both children of .blog-post element. 
 For testing purposes, the h1 should come before the p element. -->
 <style type='text/scss'>
@@ -54,7 +54,7 @@ For testing purposes, the h1 should come before the p element. -->
 </div>
 
 
-<!-- Third practice: 
+<!-- Third practice problem: 
 Write a mixin named shape and give it 3 parameters: $w, $h, and $bg-color. 
 Use the shape mixin to give the #square element a width and height of 50px, and the background color red. 
 For the #rect-a element add a width of 100px, a height of 50px, and the background color blue. 
@@ -86,7 +86,7 @@ Finally, for the #rect-b element add a width of 50px, a height of 100px, and the
 <div id="rect-b"></div>
 
 
-/* Forth practice:
+/* Forth practice problem:
 Create a mixin called border-stroke that takes a parameter $val. The mixin should check for the following conditions using @if, @else if, and @else directives:
 light - 1px solid black
 medium - 3px solid black
@@ -120,7 +120,7 @@ If the $val parameter value is not light, medium, or heavy, then the border prop
 
 <div id="box"></div>
 
-/* Fifth practice:
+/* Fifth practice problem:
 Write a @for directive that takes a variable $j that goes from 1 to 6.
 It should create 5 classes called .text-1 to .text-5 where each has a font-size set to 15px multiplied by the index.
  */
@@ -138,7 +138,7 @@ It should create 5 classes called .text-1 to .text-5 where each has a font-size 
 <p class="text-4">Hello</p>
 <p class="text-5">Hello</p>
 
-/* sixth practice:
+/* sixth practice problem:
 Write an @each directive that goes through a list: blue, black, red and assigns each variable to a .color-bg class, where the color part changes for each item to the respective color. 
 Each class should set the background-color to the respective color as well.
  */
@@ -158,7 +158,7 @@ div {
 <div class="black-bg"></div>
 <div class="red-bg"></div>
 
-/* seventh practice:
+/* seventh practice problem:
 Use @while to create a series of classes with different font-sizes.
 There should be 5 different classes from text-1 to text-5. 
 Then set font-size to 15px multiplied by the current index number.
@@ -179,3 +179,9 @@ $x: 1;
 <p class="text-3">Hello</p>
 <p class="text-4">Hello</p>
 <p class="text-5">Hello</p>
+
+/* eighth practice problem:
+Write an @import statement to import a partial named _variables.scss into the main.scss file.
+ */
+ <!-- The main.scss file -->
+ @import 'variables'
